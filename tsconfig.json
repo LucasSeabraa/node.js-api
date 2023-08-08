@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "es2020",  
+    "moduleResolution": "node",                                
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "sourceMap": true, //conseguir ver no codigo no debug
+    "outDir": "dist", //aonde vai sair
+    "strict": true,
+    "noImplicitAny": true, // nao deixar inferir o any
+    "strictNullChecks": true, // nao deixar usar null e undefined
+    "strictFunctionTypes": true, // definir as coisas
+    "noImplicitThis": true, // nao assumir que tem um this naquela função
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".", // de onde vai começar
+    "paths": {      // ao inves de voltar diretorio usamos isso para importar só com o @
+      "@src/*": ["./src/*"],
+      "@test/*": ["./test/*"]
+    },
+    "rootDirs": [      
+      "./src",
+      "./test"
+    ],
+    "experimentalDecorators": true,  
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./test/**/*.ts"
+  ],
+  "exclude": [
+    "./node_modules/*",
+    "dist"
+  ]
+}
